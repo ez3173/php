@@ -1,4 +1,5 @@
 <?php
+    require "model/mdoel.php";
     $menu = [
         "home" => "home.php",
         "presentation"=> "presentation.php"
@@ -7,7 +8,13 @@
     {
         $action = htmlspecialchars($_GET ['action']);
         if(array_key_exists($action,$menu)){
-
+            if($action == "home")
+            {
+                $prodcuts = getHomeProducts(3);
+                $myMenu = $menu["home"];
+            }elseif($action == "prensentation"){
+                $myMenu = $menu["presentation"];
+            }
             
         }
         else{
