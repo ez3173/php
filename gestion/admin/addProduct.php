@@ -53,11 +53,17 @@
             </div>
             <div class="form-group my-2">
                 <label for="categorie">Catégorie: </label>
-               <?php
-                require ".../connexion.php";
-                $categories = $bdd->query("SELECT*FROM categories");
-                while($donC = $categories)
-               ?>
+                <select name="categorie" id="categorie" class="form-control">
+                    <?php
+                        require "../connexion.php";
+                        $categories = $bdd->query("SELECT * FROM categories");
+                        while($donC = $categories->fetch())
+                        {
+                            echo "<option value='".$donC['id']."'>".$donC['title']."</option>";
+                        }
+                        $categories->closeCursor();
+                    ?>
+                </select>
             </div>
             <div class="form-group my-2">
                 <label for="fichier">Fichier: </label>

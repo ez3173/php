@@ -118,3 +118,4 @@
         header("LOCATION:addProduct.php");
     }
 ?>
+

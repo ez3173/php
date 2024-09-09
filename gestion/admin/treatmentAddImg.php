@@ -61,13 +61,13 @@
                            ":id" => $id
                        ]);
                        $insert->closeCursor();
+                    //    header("LOCATION:updateProduct.php?id=".$id."&addsuccess=ok");
                        if($extension == ".png")
-                        {
-                            header("LOCATION:redimpng.php?addimg=".$id."&image=".$fichiercptl);
+                       {
+                            header("LOCATION:redimpng.php?image=".$fichiercptl."&addimg=".$id);
                         }else{
-                            header("LOCATION:redim.php?addimg=".$id."&image=".$fichiercptl);
-                        }
-                       
+                            header("LOCATION:redim.php?image=".$fichiercptl."&addimg=".$id);
+                       }
                    }else{
                        header("LOCATION:addImg.php?id=".$id."&errorimg=3");
                    }

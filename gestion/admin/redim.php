@@ -47,20 +47,15 @@ $rep_nom="../images/mini_".$_GET['image'];
 imagejpeg($destination,$rep_nom,80);
 
 // redirection
-
-if(!isset($_GET['update']))
+if(isset($_GET['update']))
 {
-    if( isset($_GET['addimg'] ) )
-    {
-        header("LOCATION:updateProduct.php?id=".$_GET['addimg']."addsuccess=ok#galerie");
-    }else{
-
-        header("LOCATION:products.php?add=success");
-    }
-
-}else{
-    
     header("LOCATION:products.php?updatesuccess=".$_GET['update']);
+}elseif(isset($_GET['addimg']))
+{
+    header("LOCATION:updateProduct.php?id=".$_GET['addimg']."&addsuccess=ok#galerie");
+}
+else{
+    header("LOCATION:products.php?add=success");
 }
 
 

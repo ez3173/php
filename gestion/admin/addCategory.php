@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <h2>Ajouter une catégorie</h2>
         <a href="categories.php" class="btn btn-secondary my-3">Retour</a>
-        <form action="treatmentAddCategory.php" method="POST" enctype="multipart/form-data">
+        <form action="treatmentAddCategory.php" method="POST">
             <?php
                 if(isset($_GET['error']))
                 {

@@ -161,3 +161,4 @@
         header("LOCATION:updateProduct.php?id=".$id);
     }
 ?>
+
