@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Administration"
+AuthUserFile C:/Users/fievezn.CLASSES/php/ht/admin/pass/.htpasswd
+Require valid-user
